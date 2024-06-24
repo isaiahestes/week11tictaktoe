@@ -1,0 +1,49 @@
+<!-- Using any of the tools you've worked with so far, create a game of Tic-Tac-Toe.
+Create a Tic-Tac-Toe game grid using your HTML element of choice.
+ When a cell in the grid is clicked, an X or O should appear in that spot depending on whose turn it is.
+ A heading should say whether it is X's or O's turn and change with each move made.
+ A button should be available to clear the grid and restart the game.
+ When a player has won, or the board is full and the game results in a draw, a Bootstrap alert or similar Bootstrap component should appear across the screen announcing the winner. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <br>
+    <div class="container">
+        <span id="title">Tic Tac Toe</span>
+        <span id="turn">X's Turn</span>
+        <div class="row justify-content-center">
+            <div class="col-md-8 " id="wholeToe">
+                <div class="row">
+                    <div class="col-md-4 square hover" id ="a1" data-square></div>
+                    <div class="col-md-4 square" id="a2" data-square></div>
+                    <div class="col-md-4 square" id="a3"  data-square></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 square" id="b1" data-square></div>
+                    <div class="col-md-4 square" id="b2" data-square></div>
+                    <div class="col-md-4 square" id="b3" data-square></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 square" id="c1" data-square></div>
+                    <div class="col-md-4 square" id="c2" data-square></div>
+                    <div class="col-md-4 square" id="c3" data-square></div>
+                </div>
+            </div>
+        </div>
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary  btn-lg" type="button" id="restartButton">Play Again</button>
+        </div>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

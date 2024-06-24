@@ -1,0 +1,85 @@
+
+
+span{
+	display: block;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 50px;
+	margin-bottom: 50px;
+}
+ .container{
+	width: 350px;
+	margin: 50px auto 0 auto;
+    background-color: #c0c0c5;
+}
+
+.square{
+    
+    aspect-ratio: 1/1;
+  background-color: #c0c0c5;
+  border: 2px solid #080808; 
+  transition: all .25s ease-in-out;
+	font-size: 85px;
+	text-align: center;
+	line-height: 100px; 
+	
+}
+.hover:hover{   
+    
+    background-color: #5b81d3;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.x { 
+    background-color: red;  
+    color: rgba(255, 0, 0, .5);
+    background-image: url("images/shredder2.0.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+  
+}
+.o { 
+    background-color: blue;
+    color: rgba(0, 0, 255, .5);
+    background-image: url("images/turtle2.0.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.board.x .square:hover {
+    background-color: lightcoral;
+}
+
+.board.o .square:hover {
+    background-color: lightblue;
+}
+#wholeToe{
+    padding-bottom: 34px;
+}
+#a1{
+    border-left: 0; 
+    border-top: 0;
+}
+#a2{
+    border-top: 0;
+}
+#a3{
+    border-right: 0; 
+    border-top: 0;
+}
+#b1{
+    border-left: 0;
+}
+#b3{
+    border-right: 0;
+}
+#c1{
+    border-left: 0; 
+    border-bottom: 0;
+}
+#c2{
+    border-bottom: 0;
+}
+#c3{
+    border-right: 0; 
+    border-bottom: 0;
+}
