@@ -30,6 +30,7 @@ span{
     transform: scale(1.1);
     cursor: pointer;
 }
+/* what to show/format in the square once it is chosen */
 .x { 
     background-color: red;  
     color: rgba(255, 0, 0, .5);
@@ -45,6 +46,7 @@ span{
     background-position: center;
     background-repeat: no-repeat;
 }
+/* To allow hovering then to remove hovering */
 .board.x .square:hover {
     background-color: lightcoral;
 }
@@ -55,6 +57,7 @@ span{
 #wholeToe{
     padding-bottom: 34px;
 }
+/* Styling to make sure that the boxes on the side are not full boxes */
 #a1{
     border-left: 0; 
     border-top: 0;

@@ -18,11 +18,11 @@ const WINNING_COMBINATIONS = [
     [0, 4, 8],
     [2, 4, 6]
 ];
-
+// Calls the start of the game
 startGame();
 
 restartButton.addEventListener('click', startGame);
-
+// Sets the board back to the starting point
 function startGame() {
     circleTurn = false;
     squareElements.forEach(square => {
@@ -34,9 +34,8 @@ function startGame() {
         square.addEventListener('click', handleClick, { once: true });
     });
     turn.innerText = `Shredder's Turn`;
-    clearAlert();
 }
-
+// This defines what happens when you click on a square
 function handleClick(e) {
     const square = e.target;
     const currentPlayer = circleTurn ? 'o' : 'x';
@@ -50,7 +49,7 @@ function handleClick(e) {
         turn.innerText = `${circleTurn ? "Mikey's" : "Shredder's"} Turn`;
     }
 }
-
+// This is what happens when the game is over
 function endGame(draw) {
     if (draw) {
         turn.innerText = "Draw!";
@@ -59,19 +58,19 @@ function endGame(draw) {
     }
     showEndMessage(draw);
 }
-
+// Checks if its a draw
 function isDraw() {
     return [...squareElements].every(square => {
         return square.classList.contains('x') || square.classList.contains('o');
     });
 }
-
+// Tells it what mark to place in the square that has been clicked
 function placeMark(square, currentPlayer) {
     square.classList.add(currentPlayer);
     square.classList.remove("hover");
     square.innerText = currentPlayer;
 }
-
+// Checks to see if the last mark made someone win
 function checkWin(currentPlayer) {
     return WINNING_COMBINATIONS.some(combination => {
         return combination.every(index => {
@@ -80,20 +79,7 @@ function checkWin(currentPlayer) {
     });
 }
 
-function showAlert(message) {
-    $('#alertPlaceholder').html(`
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            ${message}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-    `);
-}
-
-function clearAlert() {
-    $('#alertPlaceholder').html('');
-}
+// this tells it what to do when someone wins
 function showEndMessage(draw) {
     const message = draw ? "It's a draw!" : `${circleTurn ? "Mikey" : "Shredder"} has won!`;
     const alertBox = document.createElement('div');
